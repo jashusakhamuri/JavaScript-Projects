@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #333;
+}
+
+h3 {
+  color: #444;
+  margin-top: 20px;
+}
+
+select#method {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#formSection {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+#formSection > div {
+  margin-bottom: 12px;
+}
+
+input[type="text"],
+input:not([type="radio"]),
+select {
+  padding: 8px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 8px;
+  display: inline-block;
+
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 4px;
+}
+
+button {
+  padding: 10px 18px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 3px solid #007bff;
+}

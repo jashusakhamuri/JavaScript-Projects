@@ -1,0 +1,63 @@
+=<!DOCTYPE html>
+<html>
+<head>
+  <title>CRUD API App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>CRUD Operations</h2>
+
+<select id="method" onchange="toggleForm()">
+  <option value="GET">GET Users</option>
+  <option value="POST">POST (Create)</option>
+  <option value="PUT">PUT (Update)</option>
+  <option value="DELETE">DELETE</option>
+</select>
+
+<hr>
+
+<div id="formSection">
+
+  <div id="field-id">
+    <input id="id" placeholder="User ID (optional for GET)"><br><br>
+  </div>
+
+  <div id="field-name">
+    <input id="name" placeholder="Name (search for GET, required for POST/PUT)"><br><br>
+  </div>
+
+  <div id="field-email">
+    <input id="email" placeholder="Email"><br><br>
+  </div>
+
+  <div id="field-gender">
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <br><br>
+  </div>
+
+  <div id="field-status">
+    <label>Status:</label>
+    <select id="status">
+      <option value="active">Active</option>
+      <option value="inactive">Inactive</option>
+    </select>
+  </div>
+
+</div>
+
+<br>
+
+<button onclick="handleAction()">Submit</button>
+
+<hr>
+
+<h3>Users List</h3>
+<ul id="list"></ul>
+
+<script src="script.js"></script>
+
+</body>
+</html>

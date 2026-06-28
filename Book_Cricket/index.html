@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book — Cricket Score Challenge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= LOGIN SCREEN ================= -->
+  <section id="login-screen" class="screen active">
+    <div class="login-card">
+      <div class="brand">
+        <span class="brand-ball">🏏</span>
+        <h1>BOOK_Cricket</h1>
+        <p class="brand-sub">Six balls. Two lives. One score to beat.</p>
+      </div>
+
+      <form id="login-form" autocomplete="off">
+        <label class="field">
+          <span>Username</span>
+          <input type="text" id="username" placeholder="e.g. virat99" required />
+        </label>
+        <label class="field">
+          <span>Password</span>
+          <input type="password" id="password" placeholder="••••••••" required />
+        </label>
+        <p id="login-error" class="error-text"></p>
+        <button type="submit" class="btn btn-primary">Enter the Crease</button>
+      </form>
+      <p class="hint">New here? Just type a username &amp; password — your account is created automatically.</p>
+      <button type="button" id="login-lb-btn" class="btn btn-secondary lb-trigger-btn">🏆 View Leaderboard</button>
+    </div>
+  </section>
+
+  <!-- ================= GAME SCREEN ================= -->
+  <section id="game-screen" class="screen">
+    <header class="topbar">
+      <div class="player-chip">
+        <span class="dot"></span>
+        <span id="player-name">Player</span>
+      </div>
+      <button id="logout-btn" class="btn btn-ghost">Exit</button>
+    </header>
+
+    <div class="scoreboard">
+      <div class="stat">
+        <span class="stat-value" id="score-value">0</span>
+        <span class="stat-label">Runs</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value" id="balls-value">0/6</span>
+        <span class="stat-label">Balls</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value" id="outs-value">0/2</span>
+        <span class="stat-label">Outs</span>
+      </div>
+    </div>
+
+    <div class="balls-track" id="balls-track" aria-label="Ball-by-ball results"></div>
+
+    <p id="warning-banner" class="warning-banner hidden">⚠ One chance left — next OUT ends your innings</p>
+
+    <div class="play-area">
+      <button id="bowl-btn" class="bowl-btn">
+        <span class="bowl-icon">🎯</span>
+        <span>Face the Ball</span>
+      </button>
+      <p id="ball-result" class="ball-result"></p>
+    </div>
+
+    <div id="result-panel" class="result-panel hidden">
+      <h2 id="result-title">Innings Over</h2>
+      <p id="result-score">You scored <strong>0</strong> runs</p>
+      <div class="result-actions">
+        <button id="try-again-btn" class="btn btn-primary">Try Again</button>
+        <button id="view-leaderboard-btn" class="btn btn-secondary">View Leaderboard</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LEADERBOARD SCREEN ================= -->
+  <section id="leaderboard-screen" class="screen">
+    <header class="topbar">
+      <h2 class="lb-title">🏆 Leaderboard</h2>
+      <button id="leaderboard-back-btn" class="btn btn-ghost">Back</button>
+    </header>
+
+    <div class="lb-wrap">
+      <table class="lb-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Last Score</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="lb-body"></tbody>
+      </table>
+      <p id="lb-empty" class="lb-empty hidden">No innings played yet. Be the first on the board!</p>
+    </div>
+
+    <button id="clear-lb-btn" class="btn btn-danger-outline">Clear All Data</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
